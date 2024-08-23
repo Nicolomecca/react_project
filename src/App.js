@@ -13,7 +13,6 @@ function App() {
       <MovieGallery title="Harry Potter" />
       <MovieGallery title="Star Trek" />
       <MovieGallery title="The Lord of the Rings" />
-      {/* Assicurati che questo componente mostri i film correttamente */}
       <MyFooter />
     </div>
   );

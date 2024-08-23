@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css'; // Assicurati di importare le icone Bootstrap
+import 'bootstrap-icons/font/bootstrap-icons.css'; 
 
 const MyFooter = () => {
   return (

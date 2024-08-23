@@ -18,28 +18,26 @@ class MovieCard extends Component {
     const { movie } = this.props;
 
     return (
+      <div className="text-center "> 
       <Card
-      className="movie-card rounded-0"
-      onMouseEnter={this.handleMouseEnter}
-      onMouseLeave={this.handleMouseLeave}
-      style={{ width: '240px', height: '160px', position: 'relative', overflow: 'hidden', border: 'none' }}
-    >
-      <div style={{ width: '100%', height: '100%', overflow: 'hidden' }}>
+        className="movie-card rounded-0"
+        onMouseEnter={this.handleMouseEnter}
+        onMouseLeave={this.handleMouseLeave}
+        style={{ width: '240px', height: '160px', position: 'relative', overflow: 'hidden', border: 'none' }}
+      >
         <Card.Img
           variant="top"
           src={movie.Poster}
           alt={movie.Title}
           className="movie-card-image"
-          style={{ width: '100%', height: 'auto', objectFit: 'cover' }} 
+          style={{ width: '100%', height: 'auto', objectFit: 'contain' }} 
         />
-      </div>
+      </Card>
       {this.state.selected && (
-        <Card.ImgOverlay className="d-flex align-items-center">
-          <h3 className="movie-title text-white">{movie.Title}</h3>
-        </Card.ImgOverlay>
+        <h3 className="movie-title text-white mt-3">{movie.Title}</h3> 
       )}
-    </Card>
-    );
-  }
+    </div>
+  );
+}
 }
 export default MovieCard;
