@@ -3,7 +3,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css'; // Assicurati di importare le
 
 const MyFooter = () => {
   return (
-    <footer className="bg-dark text-white">
+    <footer className="text-white" style={{ backgroundColor: '#221F1F' }}>
       <div className="row justify-content-center mt-5">
         <div className="col col-6">
           <div className="row">
@@ -55,7 +55,7 @@ const MyFooter = () => {
           </div>
           <div className="row">
             <div className="col mb-2">
-              <button type="button" className="btn btn-sm footer-button rounded-0 mt-3 ">
+              <button type="button" className="btn btn-sm footer-button rounded-0 mt-3  " style={{ backgroundColor: '#838383' }}>
                 Service Code
               </button>
             </div>

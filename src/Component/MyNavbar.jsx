@@ -1,7 +1,7 @@
 import 'bootstrap-icons/font/bootstrap-icons.css';
 const MyNavbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-dark" data-bs-theme="dark" style={{ backgroundColor: '#221f1f' }}>
+    <nav className="navbar navbar-expand-lg " data-bs-theme="dark" style={{ backgroundColor: '#221f1f' }}>
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           <img src="./logo.png" alt="Logo" style={{ width: '100px', height: '55px' }} />
@@ -35,11 +35,11 @@ const MyNavbar = () => {
               <a className="nav-link fw-bold" href="#">My List</a>
             </li>
           </ul>
-          <div className="d-flex align-items-center">
-            <i className="bi bi-search icons"></i>
-            <div id="kids" className="fw-bold">KIDS</div>
-            <i className="bi bi-bell icons"></i>
-            <i className="bi bi-person-circle icons"></i>
+          <div className="d-flex align-items-center text-white">
+            <i className="bi bi-search icons text-white"></i>
+            <div id="kids" className="fw-bold text-white">KIDS</div>
+            <i className="bi bi-bell icons text-white"></i>
+            <i className="bi bi-person-circle icons text-white"></i>
           </div>
         </div>
       </div>
