@@ -36,3 +36,92 @@
     transform: rotate(360deg);
   }
 }
+
+.footer-icon {
+  color: #838383;
+}
+
+.footer-links {
+  font-size: 0.8em;
+}
+
+.footer-links p {
+  margin-bottom: 0.3em;
+  color: #838383;
+}
+
+.footer-links a {
+  color: #838383;
+  text-decoration: none;
+}
+
+.footer-button {
+  color: #838383;
+  border-color: #838383;
+}
+
+.copyright {
+  color: #838383;
+  font-size: 0.6em;
+}
+
+html body{
+  background-color:#212529;
+}
+
+.movie-card {
+  width: 160px; 
+  /* Larghezza della card */
+  margin: 10px; /* Margine tra le card */
+  border-radius: 8px; /* Angoli arrotondati */
+  overflow: hidden; /* Nasconde il contenuto che esce dai bordi */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombra per dare profondità */
+  transition: transform 0.2s; /* Transizione per l'effetto hover */
+}
+
+.movie-card:hover {
+  transform: scale(1.05); /* Effetto di ingrandimento al passaggio del mouse */
+}
+
+.movie-card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.movie-card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7); /* Sfondo scuro con trasparenza */
+  color: white;
+  padding: 10px;
+  border-radius: 0 0 8px 8px;
+}
+
+.movie-title {
+  font-size: 1em;
+  margin: 0;
+}
+
+.movie-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-play {
+  color: #e50914; /* Rosso Netflix per il pulsante Play */
+}
+
+.btn-add {
+  color: #838383; /* Colore neutro per il pulsante My List */
+}
