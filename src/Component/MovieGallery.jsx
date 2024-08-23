@@ -12,19 +12,17 @@ class MovieGallery extends Component {
   }
 
   fetchMovies = () => {
-    fetch(`http://www.omdbapi.com/?apikey=bad02e72&t=Star%20Wars`)
+    fetch(`http://www.omdbapi.com/?apikey=bad02e72&t=${this.props.title}`)
       .then((response) => {
         if (response.ok) {
-          console.log("tutto benone");
           return response.json();
         } else {
           throw new Error("Errore nel recupero dei film");
         }
       })
       .then((movie) => {
-        console.log(movie);
         this.setState({
-          movies: [movie], // Imposta movies come un array con un singolo film
+          movies: [movie],
         });
       })
       .catch((err) => {
@@ -35,6 +33,7 @@ class MovieGallery extends Component {
   render() {
     return (
       <Container className="movie-gallery">
+        <h2>{this.props.title} Series</h2>
         <Row>
           {this.state.movies.map((movie) => (
             <Col key={movie.imdbID} xs={12} sm={6} md={4} lg={3}>
@@ -46,5 +45,4 @@ class MovieGallery extends Component {
     );
   }
 }
-
-export default MovieGallery;
+export default MovieGallery

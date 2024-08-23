@@ -1,26 +1,38 @@
+import React, { Component } from "react";
 
+class MovieCard extends Component {
+  state = {
+    selected: false,
+  };
 
-const MovieCard = ({ movie }) => {
-  return (
-    <div className="movie-card">
-      <img 
-        src={movie.Poster} 
-        alt={movie.Title} 
-        className="movie-card-image" 
-      />
-      
-        <h3 className="movie-title">{movie.Title}</h3>
-        <div className="movie-actions ">
-          <button className="btn btn-play text-white">
-            <i className="bi bi-play-circle text-white"></i> Play
-          </button>
-          <button className="btn btn-add text-white">
-            <i className="bi bi-plus-circle text-white"></i> My List
-          </button>
-        </div>
+  handleMouseEnter = () => {
+    this.setState({ selected: true });
+  };
+
+  handleMouseLeave = () => {
+    this.setState({ selected: false });
+  };
+
+  render() {
+    const { movie } = this.props;
+
+    return (
+      <div
+        className="movie-card"
+        onMouseEnter={this.handleMouseEnter}
+        onMouseLeave={this.handleMouseLeave}
+      >
+        <img
+          src={movie.Poster}
+          alt={movie.Title}
+          className="movie-card-image"
+        />
+        {this.state.selected && (
+          <h3 className="movie-title text-white">{movie.Title}</h3>
+        )}
       </div>
-    
-  );
-};
+    );
+  }
+}
 
 export default MovieCard;

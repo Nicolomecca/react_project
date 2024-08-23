@@ -3,8 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import MyNavbar from './Component/MyNavbar';
 import MyFooter from './Component/MyFooter';
 import MyTvShowSection from './Component/MyTvShowSection';
-import MovieCard from './Component/MovieCard';
 import MovieGallery from './Component/MovieGallery';
+import MyFilmList from './Component/MyFilmList';
 
 
 function App() {
@@ -12,9 +12,11 @@ function App() {
     <div>
       <MyNavbar />
       <MyTvShowSection />
-      <MovieGallery />
-      <MovieGallery />
-      <MovieGallery /> {/* Assicurati che questo componente mostri i film correttamente */}
+      <MovieGallery title='Harry Potter' /> 
+      <MovieGallery title='Harry Potter' /> 
+      <MovieGallery title='Harry Potter' /> 
+
+       {/* Assicurati che questo componente mostri i film correttamente */}
       <MyFooter />
     </div>
   );
