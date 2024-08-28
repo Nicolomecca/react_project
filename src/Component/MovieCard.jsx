@@ -1,43 +1,59 @@
-import React, { Component } from "react";
-import { Card } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-class MovieCard extends Component {
-  state = {
-    selected: false,
+const MovieCard = (props) => {
+  const [selected, setSelected] = useState(false);
+  const navigate = useNavigate();
+
+  const handleMouseEnter = () => {
+    setSelected(true);
   };
 
-  handleMouseEnter = () => {
-    this.setState({ selected: true });
+  const handleMouseLeave = () => {
+    setSelected(false);
   };
 
-  handleMouseLeave = () => {
-    this.setState({ selected: false });
-  };
+  const { movie } = props;
 
-  render() {
-    const { movie } = this.props;
-
-    return (
-      <div className="text-center "> 
+  return (
+    <div
+      className="text-center"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <Card
         className="movie-card rounded-0"
-        onMouseEnter={this.handleMouseEnter}
-        onMouseLeave={this.handleMouseLeave}
-        style={{ width: '240px', height: '160px', position: 'relative', overflow: 'hidden', border: 'none' }}
+        style={{
+          width: "240px",
+          height: "160px",
+          position: "relative",
+          overflow: "hidden",
+          border: "none",
+        }}
       >
         <Card.Img
           variant="top"
           src={movie.Poster}
           alt={movie.Title}
           className="movie-card-image"
-          style={{ width: '100%', height: 'auto', objectFit: 'contain' }} 
+          style={{ width: "100%", height: "auto", objectFit: "contain" }}
         />
       </Card>
-      {this.state.selected && (
-        <h3 className="movie-title text-white mt-3">{movie.Title}</h3> 
+      {selected && (
+        <>
+          <h3 className="movie-title text-white mt-3">{movie.Title}</h3>
+          <Button
+            variant="danger"
+            onClick={() => navigate("/details/" + movie.id)}
+            className="mt-3"
+          >
+            Vai ai dettagli
+          </Button>
+        </>
       )}
     </div>
   );
-}
-}
+};
+
 export default MovieCard;
