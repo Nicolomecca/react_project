@@ -1,5 +1,6 @@
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { Link, useLocation } from "react-router-dom";
+import { Navbar} from "react-bootstrap";
 const MyNavbar = () => {
   const location = useLocation();
   console.log("mostra ", location);
@@ -10,13 +11,15 @@ const MyNavbar = () => {
       style={{ backgroundColor: "#221f1f" }}
     >
       <div className="container-fluid">
-        <Link to="/" className="nav-link">
+      <Link to="/">
+        <Navbar.Brand>
           <img
-            src="./logo.png"
-            alt="Logo"
-            style={{ width: "100px", height: "55px" }}
+            src="/logo.png"
+            alt="logo"
+            style={{ width: '100px', height: '55px' }}
           />
-        </Link>
+        </Navbar.Brand>
+      </Link>
         <button
           className="navbar-toggler"
           type="button"

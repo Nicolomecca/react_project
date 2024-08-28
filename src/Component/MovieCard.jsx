@@ -2,7 +2,7 @@ import { Card, Button } from "react-bootstrap";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const MovieCard = (props) => {
+const MovieCard = ({movie}) => {
   const [selected, setSelected] = useState(false);
   const navigate = useNavigate();
 
@@ -14,7 +14,6 @@ const MovieCard = (props) => {
     setSelected(false);
   };
 
-  const { movie } = props;
 
   return (
     <div

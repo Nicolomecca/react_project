@@ -7,13 +7,13 @@ const NotFound = () => {
   return (
     <Container>
       <Row className="justify-content-center my-4">
-        <Col xs={12} md={6}>
+        <Col xs={12} md={6} className='text-white'>
           <h2>404 - Not found</h2>
           <p>
             Ci dispiace, ma la pagina che stavi cercando non può essere trovata.
           </p>
           <Button
-            variant="success"
+            variant="danger"
             onClick={() => {
               navigate('/') // riporta in homepage da JS
             }}

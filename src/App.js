@@ -8,14 +8,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NotFound from "./Component/NotFound";
 import MovieDetails from "./Component/MovieDetails";
 
-function App() {
+const App = () => {
   return (
-    <>
-      <BrowserRouter>
+    <BrowserRouter>
+      <div className="d-flex flex-column" style={{ minHeight: '100vh' }}>
         <header>
           <MyNavbar />
         </header>
-        <main>
+        <main className="flex-grow-1">
           <Routes>
             <Route path="/tv-shows" element={<MyTvShowSection />} />
             <Route
@@ -28,14 +28,16 @@ function App() {
                 </>
               }
             />
-            <Route path ="/details/:movieId" element={<MovieDetails/>}/>
-              <Route path="*" element={<NotFound />} />
+            <Route path="/details/:movieId" element={<MovieDetails />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
-        <MyFooter />
-      </BrowserRouter>
-    </>
+        <footer>
+          <MyFooter />
+        </footer>
+      </div>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
