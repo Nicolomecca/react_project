@@ -2,7 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
 
-const MovieDetails = (props) => {
+const MovieDetails = () => {
   const params = useParams();
   const navigate = useNavigate();
   const [movieDetails, setMovieDetails] = useState({});
@@ -19,7 +19,7 @@ const MovieDetails = (props) => {
           }
         })
         .then((data) => {
-          if (data.imdbId === params.movieId) {
+          if (data.imdbID === params.movieId) {
             setMovieDetails(data);
             setTimeout(() => {
               setIsLoading(false);

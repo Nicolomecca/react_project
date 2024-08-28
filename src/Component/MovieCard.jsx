@@ -45,7 +45,7 @@ const MovieCard = (props) => {
           <h3 className="movie-title text-white mt-3">{movie.Title}</h3>
           <Button
             variant="danger"
-            onClick={() => navigate("/details/" + movie.id)}
+            onClick={() => navigate("/details/" + movie.imdbID)}
             className="mt-3"
           >
             Vai ai dettagli
